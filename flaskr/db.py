@@ -11,7 +11,7 @@ def get_db():
             detect_types=sqlite3.PARSE_DECLTYPES # SQLite 에게 파이썬 타입을 사용하여 컬럼의 데이터를 변환하도록 지시
         )
         g.db.row_factory = sqlite3.Row # row_factory 는 쿼리를 실행한 후에 결과를 어떻게 반환할지를 결정하는 함수
-        return g.db
+    return g.db
 
 def close_db(e=None):
     db = g.pop('db',None)
